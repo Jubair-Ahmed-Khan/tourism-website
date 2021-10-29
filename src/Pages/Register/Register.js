@@ -1,15 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useHistory, useLocation } from 'react-router';
+import swal from 'sweetalert';
 
 const Register = () => {
     window.scrollTo(0, 0);
 
     // destructuring from auth 
-    const { signInUsingGoogle, handleRegister, handleEmail, handlePassword, error, handleName } = useAuth();
+    const { user, signInUsingGoogle, handleRegister, handleEmail, handlePassword, error, handleName, setUser, setIsLoading } = useAuth();
 
     // register section image 
     const imgSrc = './images/login/signin.png';
+    const location = useLocation();
+    const history = useHistory();
+
+    if (user.email) {
+        history.push('/home');
+    }
+
+    // redirect url 
+    const redirect_uri = location.state?.from || '/home';
+
+    // google sign in handle 
+    const handleSignInUsingGoogle = () => {
+        signInUsingGoogle()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_uri);
+                swal({
+                    title: "You are Successfully Logged In!",
+                    icon: "success",
+                    button: "Ok",
+                });
+            })
+
+            .catch((error) => {
+                swal({
+                    title: error.message,
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true,
+                })
+            })
+            .finally(() => setIsLoading(false));
+
+    }
 
     return (
         <div>
@@ -27,7 +63,7 @@ const Register = () => {
                     <div className="col-sm-12 col-md-8 col-lg-6 py-5">
 
                         {/* register form  */}
-                        <form onSubmit={handleRegister} className="bg-white p-5 shadow-lg">
+                        <form onSubmit={handleRegister} className="bg-white px-5">
                             <h1 className="mb-4">Register</h1>
 
                             {/* name field  */}
@@ -67,12 +103,13 @@ const Register = () => {
 
                         <p className="text-center my-3">---- or ----</p>
 
-                        {/* google login button  */}
-                        <button className=" btn btn-info w-100" onClick={signInUsingGoogle}>
-                            Log in using Google
-                        </button>
-
+                        <div className="px-5">
+                            <button onClick={handleSignInUsingGoogle} className=" btn btn-info w-100 text-center">
+                                Log in using Google
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Header.css';
@@ -40,23 +39,30 @@ const Header = () => {
                             </li>
                             {
                                 user?.email ?
-                                    <span>
-                                        <li className="nav-item">
-                                            <NavLink className="nav-link" to="/myorders">My Orders</NavLink>
-                                        </li>
-                                        <li className="nav-item">
-                                            <NavLink className="nav-link" to="/manageorders">Manage Orders</NavLink>
-                                        </li>
-                                        <li className="nav-item">
-                                            <NavLink className="nav-link" to="/addpackage">Add a package</NavLink>
-                                        </li>
-                                    </span>
+                                    <li className="nav-item d-inline-lg ">
+                                        <NavLink className="nav-link" to="/myorders">My Orders</NavLink>
+                                    </li>
                                     :
-                                    <span>
-                                        <li></li>
-                                    </span>
+                                    <li></li>
                             }
+                            {
+                                user?.email ?
+                                    <li className="nav-item d-inline-lg">
+                                        <NavLink className="nav-link" to="/manageorders">Manage Orders</NavLink>
+                                    </li>
+                                    :
+                                    <li></li>
 
+                            }
+                            {
+                                user?.email ?
+                                    <li className="nav-item d-inline-lg">
+                                        <NavLink className="nav-link" to="/addpackage">Add a package</NavLink>
+                                    </li>
+                                    :
+                                    <li></li>
+
+                            }
                         </ul>
 
 
@@ -64,20 +70,21 @@ const Header = () => {
 
                         {
                             user?.email ?
-                                <span className="navbar-text mt-3">
+                                <span className="navbar-text mt-3" style={{ fontSize: "20px" }}>
                                     <span style={{ fontSize: "20px" }} className="text-danger me-3 my-3">{user.displayName}
                                     </span>
-                                    <Button onClick={logOut} variant="info me-3 my-3">Logout</Button>
+
+                                    <NavLink to="/home" onClick={logOut} className="d-block-sm me-3 my-3 text-decoration-none"> <span><i className="fas fa-sign-out-alt ms-2 text-info"></i></span> Logout</NavLink>
 
                                 </span>
                                 :
-                                <span>
-                                    <button className="btn btn-info me-3">
-                                        <NavLink to="/login" className="text-decoration-none text-white">Login</NavLink>
-                                    </button>
-                                    <button className="btn btn-info me-3">
-                                        <NavLink to="/register" className="text-decoration-none text-white">Register</NavLink>
-                                    </button>
+                                <span style={{ fontSize: "20px" }}>
+
+                                    <NavLink to="/login" className="text-decoration-none text-white"><span><i className="fas fa-sign-in-alt text-info"></i></span> Login</NavLink>
+
+
+                                    <NavLink to="/register" className="text-decoration-none text-white"><span><i className="fas fa-sign-in-alt ms-2 text-info"></i></span> Register</NavLink>
+
                                 </span>
 
                         }

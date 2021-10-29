@@ -9,14 +9,18 @@ const Login = () => {
     window.scrollTo(0, 0);
 
     // destructuring from auth 
-    const { signInUsingGoogle, handleEmail, handlePassword, error, processLogIn, setUser, setIsLoading } = useAuth();
+    const { user, signInUsingGoogle, handleEmail, handlePassword, processLogIn, setUser, setIsLoading } = useAuth();
 
     // login section image 
-    const imgSrc = './images/login/signin.png';
+    const imgSrc = 'https://i.ibb.co/wWmV5sY/login-1.jpg';
 
     // react hooks 
     const location = useLocation();
     const history = useHistory();
+
+    if (user.email) {
+        history.push('/home');
+    }
 
     // redirect url 
     const redirect_uri = location.state?.from || '/home';
@@ -46,14 +50,18 @@ const Login = () => {
 
     }
 
+    const handleProcessLogin = () => [
+
+    ]
+
     return (
         <div>
-            <div className="container py-5">
+            <div>
                 <div className="row">
 
                     {/* login header image  */}
                     <div className="col-sm-12 col-md-8 col-lg-6">
-                        <div className="me-5">
+                        <div>
                             <img className="img-fluid" src={imgSrc} alt="welcome_image" />
                         </div>
                     </div>
@@ -62,7 +70,7 @@ const Login = () => {
                     <div className="col-sm-12 col-md-8 col-lg-6 py-5">
 
                         {/* login form  */}
-                        <form onSubmit={processLogIn} className="bg-white p-5 shadow-lg">
+                        <form onSubmit={processLogIn} className="bg-white px-5">
 
                             <h1 className="mb-4">Login</h1>
 
@@ -81,24 +89,26 @@ const Login = () => {
                             </div>
 
                             {/* login button  */}
-                            <button onClick={processLogIn} type="submit" className="btn btn-dark w-100">Login</button>
+                            <button onClick={processLogIn} className="btn btn-dark w-100">Login</button>
 
                             {/* display error  */}
-                            <p className="text-danger my-3">{error}</p>
+                            {/* <p className="text-danger my-3">{error}</p> */}
 
                             {/* go to register  */}
-                            <p className="text-danger text-decoration-none text-center my-3">
+                            <p className="text-danger text-decoration-none text-center my-2">
                                 <Link className="text-danger text-decoration-none" to="/register">Not a member yet? Please register</Link>
                             </p>
-
                         </form>
 
-                        <p className="text-center my-3">---- or ----</p>
+                        <p className="text-center my-2">---- or ----</p>
 
                         {/* google login button  */}
-                        <button onClick={handleSignInUsingGoogle} className=" btn btn-info w-100">
-                            Log in using Google
-                        </button>
+
+                        <div className="px-5">
+                            <button onClick={handleSignInUsingGoogle} className=" btn btn-info w-100 text-center">
+                                Log in using Google
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
