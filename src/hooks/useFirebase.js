@@ -67,14 +67,8 @@ const useFirebase = () => {
             setError(' Ensure string has two uppercase letters.')
             return;
         }
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setUser(result.user);
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithEmailAndPassword(auth, email, password);
+
     }
 
     // read name value

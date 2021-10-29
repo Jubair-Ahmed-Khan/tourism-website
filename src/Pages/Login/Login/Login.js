@@ -50,9 +50,28 @@ const Login = () => {
 
     }
 
-    const handleProcessLogin = () => [
+    const handleProcessLogIn = () => {
+        processLogIn()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_uri);
+                swal({
+                    title: "You are Successfully Logged In!",
+                    icon: "success",
+                    button: "Ok",
+                });
+            })
 
-    ]
+            .catch((error) => {
+                swal({
+                    title: error.message,
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true,
+                })
+            })
+            .finally(() => setIsLoading(false))
+    }
 
     return (
         <div>
@@ -89,7 +108,7 @@ const Login = () => {
                             </div>
 
                             {/* login button  */}
-                            <button onClick={processLogIn} className="btn btn-dark w-100">Login</button>
+                            <button onClick={handleProcessLogIn} className="btn btn-dark w-100">Login</button>
 
                             {/* display error  */}
                             {/* <p className="text-danger my-3">{error}</p> */}
