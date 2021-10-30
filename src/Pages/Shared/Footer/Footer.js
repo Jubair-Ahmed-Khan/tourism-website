@@ -45,7 +45,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-6">
-                        <img src={imgSrc} className="img-fluid footer-img" />
+                        <img src={imgSrc} className="img-fluid footer-img" alt="map_image" />
                     </div>
                     <p className='my-5 text-center text-white m-0 fs-5'>
                         &copy; 2021, All Rights Reserved by - <span className="text-info">TravelGURU</span>
