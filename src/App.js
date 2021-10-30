@@ -7,6 +7,8 @@ import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Register/Register';
+import About from './Pages/About/About';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -21,11 +23,17 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
 
     // footer image 
-    //const img = 'https://i.ibb.co/fk1J846/map.jpg';
+    const imgSrc = 'https://i.ibb.co/fk1J846/map.jpg';
 
     return (
         <div>
@@ -44,9 +45,13 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-6">
-
+                        <img src={imgSrc} className="img-fluid footer-img" />
                     </div>
+                    <p className='my-5 text-center text-white m-0 fs-5'>
+                        &copy; 2021, All Rights Reserved by - <span className="text-info">TravelGURU</span>
+                    </p>
                 </div>
+
             </div>
         </div>
     );

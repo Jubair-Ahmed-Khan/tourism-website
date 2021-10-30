@@ -37,7 +37,16 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/packages">Packages</NavLink>
                             </li>
+
                             {
+                                user?.email ?
+                                    <li className="nav-item d-inline-lg ">
+                                        <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
+                                    </li>
+                                    :
+                                    <li></li>
+                            }
+                            {/* {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
                                         <NavLink className="nav-link" to="/myorders">My Orders</NavLink>
@@ -62,7 +71,7 @@ const Header = () => {
                                     :
                                     <li></li>
 
-                            }
+                            } */}
                         </ul>
 
 
