@@ -1,4 +1,5 @@
 import React from 'react';
+import './PopularDestination.css';
 
 const PopularDestination = (props) => {
     // destructuring 

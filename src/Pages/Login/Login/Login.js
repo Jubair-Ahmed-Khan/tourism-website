@@ -90,7 +90,7 @@ const Login = () => {
                     {/* login form  */}
                     <form onSubmit={processLogIn} className="bg-white px-5">
 
-                        <h1 className="mb-4 text-info">Login</h1>
+                        <h1 className="mb-4">Login</h1>
 
                         {/* email field  */}
                         <div className="mb-3">

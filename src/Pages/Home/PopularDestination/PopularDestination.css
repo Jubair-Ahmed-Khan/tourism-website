@@ -1,0 +1,6 @@
+.col {
+    transition: 0.3s;
+}
+.col:hover {
+    transform: translate(0, -10px);
+}

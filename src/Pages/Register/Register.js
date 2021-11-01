@@ -63,7 +63,7 @@ const Register = () => {
 
                     {/* register form  */}
                     <form onSubmit={handleRegister} className="bg-white px-5">
-                        <h1 className="text-info mb-4">Register</h1>
+                        <h1 className="mb-4">Register</h1>
 
                         {/* name field  */}
                         <div className="mb-3">

@@ -8,7 +8,7 @@ const Speciality = (props) => {
                 <img src={img} className="card-img-top w-50 mx-auto" alt="speciality_photo" />
                 <div className="card-body">
                     <h5 className="card-title text-center">{title}</h5>
-                    <p className="card-text">{description}</p>
+                    <p className="card-text text-center">{description}</p>
                 </div>
             </div>
         </div>
