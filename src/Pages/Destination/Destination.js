@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PopularDestination = (props) => {
+const Destination = (props) => {
     // destructuring 
     const { img, name } = props.destination;
 
@@ -18,4 +18,4 @@ const PopularDestination = (props) => {
     );
 };
 
-export default PopularDestination;
+export default Destination;

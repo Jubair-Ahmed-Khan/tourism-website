@@ -10,6 +10,7 @@ import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Packages from './Pages/Packages/Packages';
+import Destinations from './Pages/Destination/Destinations';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route exact path="/packages">
               <Packages></Packages>
+            </Route>
+            <Route path="/destination">
+              <Destinations></Destinations>
             </Route>
             <Route path="/login">
               <Login></Login>

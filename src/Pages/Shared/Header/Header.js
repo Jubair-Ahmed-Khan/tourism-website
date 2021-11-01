@@ -37,6 +37,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/packages">Packages</NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/destination">Destinations</NavLink>
+                            </li>
 
                             {
                                 user?.email ?
