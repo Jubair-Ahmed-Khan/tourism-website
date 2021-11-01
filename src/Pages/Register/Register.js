@@ -63,7 +63,7 @@ const Register = () => {
 
                     {/* register form  */}
                     <form onSubmit={handleRegister} className="bg-white px-5">
-                        <h1 className="mb-4">Register</h1>
+                        <h1 className="text-info mb-4">Register</h1>
 
                         {/* name field  */}
                         <div className="mb-3">
@@ -91,7 +91,7 @@ const Register = () => {
                         {/* display error  */}
                         <p className="text-danger">{error}</p>
 
-                        <button type="submit" className="btn btn-dark w-100">Register</button>
+                        <button type="submit" className="btn btn-success w-100">Register</button>
 
                         {/* go to login  */}
                         <p className="text-danger text-decoration-none text-center my-3">
@@ -103,7 +103,7 @@ const Register = () => {
                     <p className="text-center my-3">---- or ----</p>
 
                     <div className="px-5 mb-2">
-                        <button onClick={handleSignInUsingGoogle} className=" btn btn-info w-100 text-center">
+                        <button onClick={handleSignInUsingGoogle} className=" btn btn-danger w-100 text-center">
                             Log in using Google
                         </button>
                     </div>

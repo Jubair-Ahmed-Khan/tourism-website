@@ -90,7 +90,7 @@ const Login = () => {
                     {/* login form  */}
                     <form onSubmit={processLogIn} className="bg-white px-5">
 
-                        <h1 className="mb-4">Login</h1>
+                        <h1 className="mb-4 text-info">Login</h1>
 
                         {/* email field  */}
                         <div className="mb-3">
@@ -107,7 +107,7 @@ const Login = () => {
                         </div>
 
                         {/* login button  */}
-                        <button onClick={handleProcessLogIn} className="btn btn-dark w-100">Login</button>
+                        <button onClick={handleProcessLogIn} className="btn btn-success w-100">Login</button>
 
                         {/* display error  */}
                         {/* <p className="text-danger my-3">{error}</p> */}
@@ -123,7 +123,7 @@ const Login = () => {
                     {/* google login button  */}
 
                     <div className="px-5 mb-2">
-                        <button onClick={handleSignInUsingGoogle} className=" btn btn-info w-100 text-center">
+                        <button onClick={handleSignInUsingGoogle} className=" btn btn-danger w-100 text-center">
                             Log in using Google
                         </button>
                     </div>
