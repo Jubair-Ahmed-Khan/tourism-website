@@ -11,7 +11,7 @@ const PopularDestination = (props) => {
                 {/* <img src={img} className="imgStyle" alt="country_photo" /> */}
 
                 <div className="card-img-overlay">
-                    <h3 className="text-white">{name}</h3>
+                    <h3 className="text-white position-absolute fixed-bottom ps-3">{name}</h3>
                 </div>
 
             </div>

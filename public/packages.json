@@ -3,72 +3,84 @@
         "key": 1,
         "name": "French Autumn",
         "img": "https://i.ibb.co/T2HVNyc/france.jpg",
-        "description": ""
+        "description": "Autumn in France marks the end of the long Summer break and the start of a transitional season towards Winter. It’s a beautiful season to explore the country, from cities to rural places and remote valleys in the Alps. There are some beautiful Autumn spots in France. I promise you lots of bright colours, from red to yellow to orange!",
+        "price": "$3500"
     },
     {
         "key": 2,
         "name": "Grand Switzerland",
         "img": "https://i.ibb.co/Rz04qxY/switzerland.jpg",
-        "description": ""
+        "description": "From palm-lined lakeshores to sparkling glaciers, from medieval villages to buzzing cities – the Grand Tour of Switzerland packs in an incredible number of sights. The concentration of attractions is unrivalled worldwide.Discover Switzerland at your own pace on a road trip with is a great pleasure.",
+        "price": "$4000"
     },
     {
         "key": 3,
         "name": "Discover Japan",
         "img": "https://i.ibb.co/D4LCvhD/kyoto.jpg",
-        "description": ""
+        "description": "From ice-blue pools in Hokkaido to the turquoise seas of Okinawa, with ancient forests and sand dunes in between, Japan holds myriad natural wonders. Although some may be more of a struggle to reach than others, they are all incredible displays of the power of nature that you'll never forget.",
+        "price": "$3700"
     },
     {
         "key": 4,
         "name": "Niko Trip",
         "img": "https://i.ibb.co/ZxHYR8z/tokyo.jpg",
-        "description": ""
+        "description": "Nikko is located in the northwestern part of Tochigi Prefecture, best known for its vast and rich nature and the many famous sightseeing spots, including historical shrines and temples. As it used to be the sacred land of mountain worship, many people visit Nikko for its distinctive mystical atmosphere.",
+        "price": "$3200"
     },
     {
         "key": 5,
         "name": "Seoul Your Soul",
         "img": "https://i.ibb.co/KFQQM3M/seoul.jpg",
-        "description": ""
+        "description": "South Korea is on everyone's radar right now, as PyeongChang gears up to host the Winter Olympics beginning on February 9. But the country's appeal extends far beyond athletic facilities—with ancient temples, tea plantations, trendy neighborhoods, and more than 3,000 offshore islands to explore, South Korea should be on everyone's travel bucket list. Need more convincing? Here are the country's most beautiful sites, ready to welcome you long after the Olympians head home.",
+        "price": "$3800"
     },
     {
         "key": 6,
         "name": "Hong Kong",
         "img": "https://i.ibb.co/jfHrJ4m/hongkong.jpg",
-        "description": ""
+        "description": "With Hong Kong’s skyscraper filled cityscape, it’s easy for many of us to neglect the countless natural gems in this city – country parks, hiking trails and our many outlying islands. In fact, only 25 percent of Hong Kong’s land area has been development, and 40 percent is designated by the government as country parks and special areas for the purposes of nature conservation, countryside recreation and outdoor education. Ever felt a bit stressed out staring at the tower-studded skyline? Explore outdoors for after-school/work activities or weekend getaways – Nature never ceases to amaze us!",
+        "price": "$4200"
     },
     {
         "key": 7,
         "name": "Great Britain Travel",
         "img": "https://i.ibb.co/hBrHvss/london.jpg",
-        "description": ""
+        "description": "Get off the beaten track and discover England's natural treasures. As you walk away from the main streets, you will discover parks, meet squirrels, pelicans, foxes, deer and fallow deer. In England, you are never far from a lake, a river or the sea.",
+        "price": "$4500"
     },
     {
         "key": 8,
         "name": "Exclusive Prague Trip",
         "img": "https://i.ibb.co/N7WGP5b/parague.jpg",
-        "description": ""
+        "description": "This city is surrounded by beautiful forests and rivers. ... The people of Prague are another massive asset to the city too. They are open-minded and friendly. To meet them you should try and explore different places than just Charles Bridge and Wenceslas Square which are mainly filled with tourists.",
+        "price": "$4000"
     },
     {
         "key": 9,
-        "name": "The new California",
+        "name": "The New California",
         "img": "https://i.ibb.co/kX66C72/california.jpg",
-        "description": ""
+        "description": "The Golden State stretches 840 miles long, boasting a truly diverse range of geography. Whether you want to hit the beach, the desert, the mountains, or even an urban city, you can find it all among these most-gorgeous-of-all destinations. Who's down for a road trip?!",
+        "price": "$4100"
     },
     {
         "key": 10,
         "name": "5 Lake of Fuji San",
         "img": "https://i.ibb.co/PspQtzK/fuji.jpg",
-        "description": ""
+        "description": "Come spring, countless cherry trees around Japan burst into color, a spectrum that runs from the palest of pink to a riotous magenta. That's the cue for locals to gather in parks and along river banks for cherry blossom viewing parties called hanami. It's a tradition that dates back centuries and one that remains popular today. The blossoms last only for a week or two, symbolic of life's ephemeral nature, but also a reminder to seize the present. ",
+        "price": "$4500"
     },
     {
         "key": 11,
         "name": "Swiss Alps Trip",
         "img": "https://i.ibb.co/4jL9vMJ/swiss.jpg",
-        "description": ""
+        "description": "The Alps' most famous peak is situated near the beautiful, car-free village of Zermatt, towering over the border between Switzerland and Italy at nearly 15,000 feet high. One of Switzerland's best-known features, it's said to be the most photographed mountain in the world.",
+        "price": "$3900"
     },
     {
         "key": 12,
         "name": "Colorful Singapore",
         "img": "https://i.ibb.co/gWQFpWZ/singapore.jpg",
-        "description": ""
+        "description": "Singapore is packed with natural attractions, and – as with many other facets of the City-State – Singapore’s nature parks are extremely well organised and planned. Singapore night safari has many fascinating draws, as does the zoo and the aquarium. The Jurong Bird Park is justifiably world famous and another big draw is the Reptile Park.Set in the gorgeous Botanic Gardens, the National Orchid Garden has a collection of more than 1,000 species and 2,000 hybrid orchids. Below, see our guide to the best natural attractions in Singapore.",
+        "price": "$4000"
     }
 ]

@@ -15,12 +15,12 @@ const Packages = () => {
             <div className="container">
 
                 {/* service section header  */}
-                <h2 className="text-center pt-5">Our packages</h2>
+                <h2 className="text-center pt-5">Special packages</h2>
 
                 {/* display services  */}
-                <div className="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 py-5">
+                <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 py-5">
                     {
-                        packages.map(pkg => <Package
+                        packages?.slice(0, 6).map(pkg => <Package
                             key={pkg._id}
                             pkg={pkg}
                         ></Package>)

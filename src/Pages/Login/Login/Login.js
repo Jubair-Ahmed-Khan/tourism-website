@@ -9,7 +9,7 @@ const Login = () => {
     window.scrollTo(0, 0);
 
     // destructuring from auth 
-    const { user, signInUsingGoogle, handleEmail, handlePassword, processLogIn, setUser, setIsLoading } = useAuth();
+    const { user, signInUsingGoogle, handleEmail, handlePassword, processLogIn, setUser, setIsLoading, error } = useAuth();
 
     // login section image 
     const imgSrc = 'https://i.ibb.co/JC1m3kH/login-2.jpg';
@@ -50,28 +50,28 @@ const Login = () => {
 
     }
 
-    const handleProcessLogIn = () => {
-        processLogIn()
-            .then(result => {
-                setUser(result.user);
-                history.push(redirect_uri);
-                swal({
-                    title: "You are Successfully Logged In!",
-                    icon: "success",
-                    button: "Ok",
-                });
-            })
+    // const handleProcessLogIn = () => {
+    //     processLogIn()
+    //         .then(result => {
+    //             setUser(result.user);
+    //             history.push(redirect_uri);
+    //             swal({
+    //                 title: "You are Successfully Logged In!",
+    //                 icon: "success",
+    //                 button: "Ok",
+    //             });
+    //         })
 
-            .catch((error) => {
-                swal({
-                    title: error.message,
-                    icon: "error",
-                    buttons: true,
-                    dangerMode: true,
-                })
-            })
-            .finally(() => setIsLoading(false))
-    }
+    //         .catch((error) => {
+    //             swal({
+    //                 title: error.message,
+    //                 icon: "error",
+    //                 buttons: true,
+    //                 dangerMode: true,
+    //             })
+    //         })
+    //         .finally(() => setIsLoading(false))
+    // }
 
     return (
         <div className='container'>
@@ -107,10 +107,10 @@ const Login = () => {
                         </div>
 
                         {/* login button  */}
-                        <button onClick={handleProcessLogIn} className="btn btn-success w-100">Login</button>
+                        <button className="btn btn-success w-100">Login</button>
 
                         {/* display error  */}
-                        {/* <p className="text-danger my-3">{error}</p> */}
+                        <p className="text-danger my-3">{error}</p>
 
                         {/* go to register  */}
                         <p className="text-danger text-decoration-none text-center my-2">

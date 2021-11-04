@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Packages from '../Packages/Packages';
 import PopularDestinations from '../PopularDestinations/PopularDestinations';
@@ -7,13 +8,29 @@ import Specialities from '../Specialities/Specialities';
 
 // container of home components 
 const Home = () => {
+    let [packages, setPackages] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        fetch('http://localhost:5000/packages')
+            .then(res => res.json())
+            .then(data => {
+                setPackages(data);
+                setIsLoading(false);
+            });
+    }, [])
+
+    packages = [];
+
     return (
-        <div>
-            <Banner></Banner>
-            <Packages></Packages>
-            <PopularDestinations></PopularDestinations>
-            <Specialities></Specialities>
-        </div>
+        isLoading ? <div className='mt-5 pt-5 text-center' style={{ height: '80vh' }}>
+            <Spinner animation='grow'></Spinner></div>
+            :
+            <div>
+                <Banner></Banner>
+                <Packages></Packages>
+                <PopularDestinations></PopularDestinations>
+                <Specialities></Specialities>
+            </div>
     );
 };
 

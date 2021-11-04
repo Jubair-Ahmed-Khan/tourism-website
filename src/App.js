@@ -8,9 +8,14 @@ import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
-import Dashboard from './Pages/Dashboard/Dashboard';
+// import Dashboard from './Pages/Dashboard/Dashboard';
 import Packages from './Pages/Packages/Packages';
 import Destinations from './Pages/Destination/Destinations';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import ManageOrders from './Pages/MannageOrders/ManageOrders';
+import AddPackage from './Pages/AddPackage/AddPackage';
+import PackageDetails from './Pages/PackageDetails/PackageDetails';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -31,6 +36,9 @@ function App() {
             <Route exact path="/packages">
               <Packages></Packages>
             </Route>
+            <PrivateRoute path="/packages/:packageId">
+              <PackageDetails></PackageDetails>
+            </PrivateRoute>
             <Route path="/destination">
               <Destinations></Destinations>
             </Route>
@@ -40,8 +48,14 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/dashboard">
-              <Dashboard></Dashboard>
+            <Route path="/myorders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route path="/manageorders">
+              <ManageOrders></ManageOrders>
+            </Route>
+            <Route path="/addpackage">
+              <AddPackage></AddPackage>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

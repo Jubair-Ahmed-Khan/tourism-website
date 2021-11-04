@@ -41,15 +41,15 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/destination">Destinations</NavLink>
                             </li>
 
-                            {
+                            {/* {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
                                         <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
                                     </li>
                                     :
                                     <li></li>
-                            }
-                            {/* {
+                            } */}
+                            {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
                                         <NavLink className="nav-link" to="/myorders">My Orders</NavLink>
@@ -74,7 +74,7 @@ const Header = () => {
                                     :
                                     <li></li>
 
-                            } */}
+                            }
                         </ul>
 
 

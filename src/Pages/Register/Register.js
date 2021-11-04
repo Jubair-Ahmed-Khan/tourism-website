@@ -8,7 +8,7 @@ const Register = () => {
     window.scrollTo(0, 0);
 
     // destructuring from auth 
-    const { user, signInUsingGoogle, handleRegister, handleEmail, handlePassword, error, handleName, setUser, setIsLoading } = useAuth();
+    const { user, signInUsingGoogle, handleRegister, handleEmail, handlePassword, handleName, setUser, setIsLoading } = useAuth();
 
     // register section image 
     const imgSrc = 'https://i.ibb.co/bJ3xGCs/register.jpg';
@@ -89,7 +89,7 @@ const Register = () => {
                         </div>
 
                         {/* display error  */}
-                        <p className="text-danger">{error}</p>
+                        {/* <p className="text-danger">{error}</p> */}
 
                         <button type="submit" className="btn btn-success w-100">Register</button>
 
