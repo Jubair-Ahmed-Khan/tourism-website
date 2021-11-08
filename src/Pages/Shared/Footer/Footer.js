@@ -11,7 +11,7 @@ const Footer = () => {
         <div>
             <div>
                 <div className="bg-dark text-white row m-0 py-3 px-3">
-                    <div className="col-sm-12 col-md-12 col-lg-6">
+                    <div className="col-sm-12 col-md-12 col-lg-12">
                         <div className="row">
                             <div className="col-sm-12 col-md-6 col-lg-4 my-2">
                                 <h5 className="text-uppercase text-info">About</h5>
