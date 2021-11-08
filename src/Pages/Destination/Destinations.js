@@ -7,7 +7,7 @@ const Destinations = () => {
 
     // load destination info 
     useEffect(() => {
-        fetch('http://localhost:5000/destination')
+        fetch('https://stark-sierra-09024.herokuapp.com/destination')
             .then(res => res.json())
             .then(data => setDestinations(data))
     }, [])

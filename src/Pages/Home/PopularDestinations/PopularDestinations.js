@@ -7,7 +7,7 @@ const PopularDestinations = () => {
 
     // load destination info 
     useEffect(() => {
-        fetch('http://localhost:5000/destination')
+        fetch('https://stark-sierra-09024.herokuapp.com/destination')
             .then(res => res.json())
             .then(data => setDestinations(data))
     }, [])
@@ -22,7 +22,7 @@ const PopularDestinations = () => {
                 <p className="text-center text-muted">World's best tourist destinations</p>
 
                 {/* display destination */}
-                <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1 row-cols-1 my-5">
+                <div className="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-1 my-5">
                     {
                         destinations.slice(0, 4).map(destination => <PopularDestination
                             key={destination.key}

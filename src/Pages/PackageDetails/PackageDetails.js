@@ -9,7 +9,7 @@ const PackageDetails = () => {
     const [packages, setPackages] = useState([]);
     const [isLoadingPackage, setIsLoadingPackage] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://stark-sierra-09024.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => {
                 setPackages(data);

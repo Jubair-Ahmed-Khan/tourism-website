@@ -7,7 +7,7 @@ const Specialities = () => {
 
     // load specialities info 
     useEffect(() => {
-        fetch('http://localhost:5000/speciality')
+        fetch('https://stark-sierra-09024.herokuapp.com/speciality')
             .then(res => res.json())
             .then(data => setSpecialities(data))
     }, [])
