@@ -52,7 +52,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
-                                        <NavLink className="nav-link" to="/myorders">My Orders</NavLink>
+                                        <NavLink className="nav-link" to="/myorders">My Bookings</NavLink>
                                     </li>
                                     :
                                     <li></li>
@@ -60,7 +60,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg">
-                                        <NavLink className="nav-link" to="/manageorders">Manage Orders</NavLink>
+                                        <NavLink className="nav-link" to="/manageorders">Manage Bookings</NavLink>
                                     </li>
                                     :
                                     <li></li>

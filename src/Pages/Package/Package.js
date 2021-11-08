@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import './Package.css';
-import useAuth from '../../hooks/useAuth';
+// import useAuth from '../../hooks/useAuth';
 
 const Package = (props) => {
 
@@ -26,7 +26,7 @@ const Package = (props) => {
                     <div className="d-flex justify-content-between p-2">
                         <p style={{ fontSize: "30px" }} className="text-danger fw-bolder">{price}</p>
                         <Link to={`/packages/${key}`} className="text-decoration-none">
-                            <button className="btn btn-primary w-50">View Details</button>
+                            <button className="btn btn-primary w-100">View Details</button>
                         </Link>
                     </div>
                 </div>

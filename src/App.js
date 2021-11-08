@@ -17,6 +17,7 @@ import AddPackage from './Pages/AddPackage/AddPackage';
 import PackageDetails from './Pages/PackageDetails/PackageDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
+
 function App() {
   return (
     <div>
@@ -36,6 +37,9 @@ function App() {
             <Route exact path="/packages">
               <Packages></Packages>
             </Route>
+            <Route path="/packages/add">
+              <AddPackage></AddPackage>
+            </Route>
             <PrivateRoute path="/packages/:packageId">
               <PackageDetails></PackageDetails>
             </PrivateRoute>
@@ -53,9 +57,6 @@ function App() {
             </Route>
             <Route path="/manageorders">
               <ManageOrders></ManageOrders>
-            </Route>
-            <Route path="/addpackage">
-              <AddPackage></AddPackage>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
