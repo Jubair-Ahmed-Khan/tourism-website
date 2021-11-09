@@ -25,6 +25,12 @@ const Packages = () => {
                             pkg={pkg}
                         ></Package>)
                     }
+                    {
+                        packages?.slice(12, packages.length).map(pkg => <Package
+                            key={pkg._id}
+                            pkg={pkg}
+                        ></Package>)
+                    }
                 </div>
             </div>
         </div>

@@ -8,9 +8,9 @@ const Footer = () => {
     }
 
     return (
-        <div>
-            <div>
-                <div className="bg-dark text-white row m-0 py-3 px-3">
+        <div className="bg-dark">
+            <div className="container bg-dark text-white">
+                <div className="row m-0 py-3 px-3">
                     <div className="col-sm-12 col-md-12 col-lg-12">
                         <div className="row">
                             <div className="col-sm-12 col-md-6 col-lg-4 my-2">

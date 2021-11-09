@@ -19,7 +19,7 @@ const Home = () => {
             });
     }, [])
 
-    packages = [];
+    console.log(packages.length);
 
     return (
         isLoading ? <div className='mt-5 pt-5 text-center' style={{ height: '80vh' }}>

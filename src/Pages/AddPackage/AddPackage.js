@@ -1,28 +1,40 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const AddPackage = () => {
-    return (
-        <div className="container my-5">
-            <form>
-                <h2 className="text-primary">Add a Package</h2>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
-                    <input type="text" className="form-control" id="exampleInputName" aria-describedby="nameHelp" />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputImage" className="form-label">Image</label>
-                    <input type="text" className="form-control" id="exampleInputImage" />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputDescription" className="form-label">Description</label>
-                    <input type="text" className="form-control" id="exampleInputDescription" />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPrice" className="form-label">Price</label>
-                    <input type="text" className="form-control" id="exampleInputPrice" />
-                </div>
+    const { register, reset, handleSubmit } = useForm();
+    const [packages, setPackages] = useState([]);
+    const key = packages.length + 1;
 
-                <button type="submit" className="btn btn-primary">Submit</button>
+    // load packages 
+    useEffect(() => {
+        fetch('https://stark-sierra-09024.herokuapp.com/packages')
+            .then(res => res.json())
+            .then(data => setPackages(data));
+    }, [])
+    const onSubmit = data => {
+        console.log(data);
+        axios.post('http://localhost:5000/packages', data)
+            .then(res => {
+                console.log(res);
+                reset();
+            })
+
+    };
+    return (
+
+        <div className="container my-5">
+
+            <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column justify-content-center align-items-center border border-1 shadow-lg">
+                <h2 className="text-primary my-5">Add a Package</h2>
+                <h5>Key: {key}</h5>
+                <input {...register("key")} className="mb-3 w-50" placeholder="Enter the above key here" />
+                <input {...register("name")} className="mb-3 w-50" placeholder="Enter Package Name" />
+                <input {...register("img")} className="mb-3 w-50" placeholder="Enter Package Image URL" />
+                <textarea {...register("description")} className="mb-3 w-50" placeholder="Enter Package Description" />
+                <input type="text" {...register("price")} className="mb-3 w-50" placeholder="Enter Package Price" />
+                <input type="submit" className="mb-5" />
             </form>
         </div>
     );

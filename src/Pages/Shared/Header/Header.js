@@ -32,23 +32,12 @@ const Header = () => {
                                 <NavLink className="nav-link" aria-current="page" to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/about">About Us</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink className="nav-link" to="/packages">Packages</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/destination">Destinations</NavLink>
                             </li>
 
-                            {/* {
-                                user?.email ?
-                                    <li className="nav-item d-inline-lg ">
-                                        <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
-                                    </li>
-                                    :
-                                    <li></li>
-                            } */}
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
@@ -69,7 +58,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg">
-                                        <NavLink className="nav-link" to="/addpackage">Add a package</NavLink>
+                                        <NavLink className="nav-link" to="/packages/add">Add a package</NavLink>
                                     </li>
                                     :
                                     <li></li>

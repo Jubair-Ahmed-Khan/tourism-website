@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 import swal from 'sweetalert';
-import { useHistory } from "react-router";
+// import { useHistory, useLocation } from "react-router";
 initializeAuthentication();
 
 const useFirebase = () => {
@@ -16,7 +16,7 @@ const useFirebase = () => {
     const [error, setError] = useState('');
 
     // const location = useLocation();
-    const history = useHistory();
+    // const history = useHistory();
 
     // redirect url 
     // const redirect_uri = location.state?.from || '/home';
@@ -82,6 +82,7 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
+                // history.push(redirect_uri);
                 swal({
                     title: "You are Successfully logged in!",
                     icon: "success",
@@ -96,6 +97,7 @@ const useFirebase = () => {
                     dangerMode: true,
                 })
             })
+            .finally(() => setIsLoading(false))
 
     }
 
