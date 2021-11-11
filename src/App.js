@@ -10,11 +10,14 @@ import Register from './Pages/Register/Register';
 // import Dashboard from './Pages/Dashboard/Dashboard';
 import Packages from './Pages/Packages/Packages';
 import Destinations from './Pages/Destination/Destinations';
-import MyOrders from './Pages/MyOrders/MyOrders';
-import ManageOrders from './Pages/MannageOrders/ManageOrders';
+// import MyOrders from './Pages/MyOrders/MyOrders';
+// import ManageOrders from './Pages/MannageOrders/ManageOrders';
 import AddPackage from './Pages/AddPackage/AddPackage';
 import PackageDetails from './Pages/PackageDetails/PackageDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+// import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import MyBookings from './Pages/MyBookings/MyBookings';
+import ManageBookings from './Pages/ManageBookings/ManageBookings';
 
 
 function App() {
@@ -48,11 +51,14 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/myorders">
-              <MyOrders></MyOrders>
+            {/* <Route path="/placeorder">
+              <PlaceOrder></PlaceOrder>
+            </Route> */}
+            <Route path="/mybookings">
+              <MyBookings></MyBookings>
             </Route>
-            <Route path="/manageorders">
-              <ManageOrders></ManageOrders>
+            <Route path="/managebookings">
+              <ManageBookings></ManageBookings>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
