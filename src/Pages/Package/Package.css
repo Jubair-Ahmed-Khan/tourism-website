@@ -2,3 +2,10 @@
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
+
+.hover-effect {
+    transition: 0.3s;
+}
+.hover-effect:hover {
+    transform: translate(0, -10px);
+}

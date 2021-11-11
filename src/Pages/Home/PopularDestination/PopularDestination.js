@@ -6,7 +6,7 @@ const PopularDestination = (props) => {
     const { img, name } = props.destination;
 
     return (
-        <div className="col mb-3">
+        <div className="col mb-3 hover-effect">
             <div style={{ height: "350px", backgroundImage: `url(${img})` }} className="card border-0">
                 {/* <img src={img} className="imgStyle" alt="country_photo" /> */}
 

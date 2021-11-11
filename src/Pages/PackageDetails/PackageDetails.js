@@ -15,11 +15,13 @@ const PackageDetails = () => {
     const [isLoadingPackage, setIsLoadingPackage] = useState(true);
 
     const onSubmit = data => {
+        const singlePackage = packages.find(pkg => pkg.key === parseInt(packageId));
         data.key = packageId;
         data.status = 'Pending';
+        data.packageName = singlePackage.name;
         // console.log(data);
         // reset();
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://stark-sierra-09024.herokuapp.com/bookings', data)
             .then(res => {
                 // console.log(res);
                 reset();

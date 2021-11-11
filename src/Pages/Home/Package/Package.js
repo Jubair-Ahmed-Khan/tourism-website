@@ -11,7 +11,7 @@ const Package = (props) => {
     }
     return (
         <div>
-            <div className="col">
+            <div className="col hover-effect">
                 <div style={cardStyle} className="card mb-3">
                     <img src={img} className="card-img-top img-radius" style={{ height: "250px" }} alt="package_photo" />
                     <div className="card-body ps-2">

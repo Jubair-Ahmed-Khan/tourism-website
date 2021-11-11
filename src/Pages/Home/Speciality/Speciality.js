@@ -1,9 +1,10 @@
 import React from 'react';
+import './Speciality.css';
 
 const Speciality = (props) => {
     const { img, title, description } = props.speciality;
     return (
-        <div className="col">
+        <div className="col hover-effect">
             <div className="card h-100 border-0">
                 <img src={img} className="card-img-top w-50 mx-auto" alt="speciality_photo" />
                 <div className="card-body">
