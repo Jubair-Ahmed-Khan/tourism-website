@@ -29,6 +29,7 @@ const PackageDetails = () => {
 
         // find single package 
         const singlePackage = packages.find(pkg => pkg.key === parseInt(packageId));
+        console.log(singlePackage);
 
         // add new properties 
         data.key = packageId;
@@ -71,8 +72,10 @@ const PackageDetails = () => {
 
     // load clicked package 
     useEffect(() => {
-        setCurrentPackage(packages.find(pkg => pkg.key === parseInt(packageId)));
+        setCurrentPackage(packages.find(pkg => parseInt(pkg.key) === parseInt(packageId)));
     }, [packages]);
+
+    console.log(currentPackage);
 
     return (
         isLoadingPackage === false

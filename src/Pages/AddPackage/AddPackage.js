@@ -46,7 +46,7 @@ const AddPackage = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column justify-content-center align-items-center border border-1 shadow-lg">
                 <h2 className="text-primary my-5">Add a Package</h2>
                 <h5>Key: {key}</h5>
-                <input {...register("key")} className="mb-3 w-50" placeholder="Enter the above key here" />
+                <input type="number" {...register("key")} className="mb-3 w-50" placeholder="Enter the above key here" />
                 <input {...register("name")} className="mb-3 w-50" placeholder="Enter Package Name" />
                 <input {...register("img")} className="mb-3 w-50" placeholder="Enter Package Image URL" />
                 <textarea {...register("description")} className="mb-3 w-50" placeholder="Enter Package Description" />
