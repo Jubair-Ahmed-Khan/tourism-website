@@ -55,7 +55,10 @@ const MyBooking = (props) => {
     return (
 
         <div className="border shadow-lg mb-3 p-3">
-            <h4 className="fw-bold my-3">Booking Id: #{_id}</h4>
+            <p>
+                <span className="fw-bold">Booking Id: </span><br />
+                {_id}
+            </p>
             <p>
                 <span className="fw-bold">Package Name: </span><br />
                 {packageName}
