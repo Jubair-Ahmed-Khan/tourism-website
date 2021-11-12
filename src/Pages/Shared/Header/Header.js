@@ -38,6 +38,8 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/destination">Destinations</NavLink>
                             </li>
 
+                            {/* conditional rendering  */}
+
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg ">
@@ -46,6 +48,7 @@ const Header = () => {
                                     :
                                     <li></li>
                             }
+
                             {
                                 user?.email ?
                                     <li className="nav-item d-inline-lg">
@@ -64,8 +67,8 @@ const Header = () => {
                                     <li></li>
 
                             }
-                        </ul>
 
+                        </ul>
 
                         {/* conditional rendering  */}
 

@@ -8,11 +8,15 @@ const AddPackage = () => {
     const key = packages.length + 1;
 
     // load packages 
+
     useEffect(() => {
         fetch('https://stark-sierra-09024.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, [])
+
+    // handle form submit 
+
     const onSubmit = data => {
         console.log(data);
         axios.post('https://stark-sierra-09024.herokuapp.com/packages', data)
@@ -24,8 +28,9 @@ const AddPackage = () => {
     };
     return (
 
-        <div className="container my-5">
+        //add package form
 
+        <div className="container my-5">
             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column justify-content-center align-items-center border border-1 shadow-lg">
                 <h2 className="text-primary my-5">Add a Package</h2>
                 <h5>Key: {key}</h5>

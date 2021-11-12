@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 import swal from 'sweetalert';
-// import { useHistory, useLocation } from "react-router";
+
 initializeAuthentication();
 
 const useFirebase = () => {
@@ -15,24 +15,15 @@ const useFirebase = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    // const location = useLocation();
-    // const history = useHistory();
-
-    // redirect url 
-    // const redirect_uri = location.state?.from || '/home';
-
-
     // google auth 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-
 
     // google sign in 
     const signInUsingGoogle = () => {
         setIsLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
-
 
     // handle registration 
     const handleRegister = e => {
@@ -98,7 +89,6 @@ const useFirebase = () => {
                 })
             })
             .finally(() => setIsLoading(false))
-
     }
 
     // read name value

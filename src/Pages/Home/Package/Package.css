@@ -1,11 +1,15 @@
+/* image border radius */
 .img-radius{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
 
+/* package hover transition  */
 .hover-effect {
     transition: 0.3s;
 }
+
+/* package hover effect  */
 .hover-effect:hover {
     transform: translate(0, -10px);
 }

@@ -2,32 +2,55 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
+import swal from 'sweetalert';
 import useAuth from '../../hooks/useAuth';
 
 const PackageDetails = () => {
     window.scrollTo(0, 0);
+
+    // package id 
     const { packageId } = useParams();
+
+    //load user from auth
     const { user } = useAuth();
+
+    //useHistory hook
+    const history = useHistory();
+
+    //object destructuring
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
-    // const history = useHistory();
+
     const [packages, setPackages] = useState([]);
     const [isLoadingPackage, setIsLoadingPackage] = useState(true);
 
+    // handle form submit 
     const onSubmit = data => {
+
+        // find single package 
         const singlePackage = packages.find(pkg => pkg.key === parseInt(packageId));
+
+        // add new properties 
         data.key = packageId;
         data.status = 'Pending';
         data.packageName = singlePackage.name;
-        // console.log(data);
-        // reset();
+
+        // send to bookings 
         axios.post('https://stark-sierra-09024.herokuapp.com/bookings', data)
             .then(res => {
-                // console.log(res);
                 reset();
             })
+        swal({
+            title: "You booking is placed successfully!",
+            icon: "success",
+            button: "Ok",
+        });
+
+        history.push('/mybookings');
 
     };
+
+    // load all packages 
     useEffect(() => {
         fetch('https://stark-sierra-09024.herokuapp.com/packages')
             .then(res => res.json())
@@ -46,17 +69,18 @@ const PackageDetails = () => {
 
     const [currentPackage, setCurrentPackage] = useState({});
 
+    // load clicked package 
     useEffect(() => {
         setCurrentPackage(packages.find(pkg => pkg.key === parseInt(packageId)));
     }, [packages]);
-    // function handleOrder() {
-    //     history.push('/placeorder')
-    // }
+
     return (
         isLoadingPackage === false
             ?
             <div className='mt-3 pt-4'>
                 <div className='row m-0 justify-content-around g-4'>
+
+                    {/* single package details info */}
                     <div className='col-md-7 border-end mb-5'>
                         <h2 className='border-bottom text-center fw-bold py-3'>{currentPackage?.name}</h2>
                         <div className='mx-3 mt-3 border rounded' style={{ minHeight: '100px' }}>
@@ -73,6 +97,8 @@ const PackageDetails = () => {
                             </h5>
                         </div>
                     </div>
+
+                    {/* order place form  */}
                     <div className='col-md-4 mt-4' >
                         <h2 className="text-center">Place Order</h2>
                         <form onSubmit={handleSubmit(onSubmit)} className="my-4">
@@ -174,14 +200,6 @@ const PackageDetails = () => {
                         </form>
                     </div>
                 </div>
-                {/* <div className='py-4 text-center '>
-                    <Button variant='danger' onClick={() => { history.push('/home') }} className='ms-2' >
-                        Go to Home
-                    </Button>
-                    <Button variant='success' onClick={handleOrder} className='ms-4' >
-                        Book This Service
-                    </Button>
-                </div> */}
             </div>
             :
             <div className='mt-5 pt-5 text-center' style={{ height: '100vh' }}>

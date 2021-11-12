@@ -1,6 +1,9 @@
+/* popular destination transition */
 .hover-effect {
     transition: 0.3s;
 }
+
+/* popular destination hover effect  */
 .hover-effect:hover {
     transform: translate(0, -10px);
 }

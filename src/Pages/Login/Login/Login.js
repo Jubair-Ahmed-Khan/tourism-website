@@ -18,6 +18,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
 
+    // redirect home 
     if (user.email) {
         history.push('/home');
     }
@@ -49,29 +50,6 @@ const Login = () => {
             .finally(() => setIsLoading(false));
 
     }
-
-    // const handleProcessLogIn = () => {
-    //     processLogIn()
-    //         .then(result => {
-    //             setUser(result.user);
-    //             history.push(redirect_uri);
-    //             swal({
-    //                 title: "You are Successfully Logged In!",
-    //                 icon: "success",
-    //                 button: "Ok",
-    //             });
-    //         })
-
-    //         .catch((error) => {
-    //             swal({
-    //                 title: error.message,
-    //                 icon: "error",
-    //                 buttons: true,
-    //                 dangerMode: true,
-    //             })
-    //         })
-    //         .finally(() => setIsLoading(false))
-    // }
 
     return (
         <div className='container'>

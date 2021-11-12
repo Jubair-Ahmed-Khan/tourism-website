@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
 
-    //home banner image link 
+    //home banner images link 
     const banner1 = 'https://i.ibb.co/0QHP3NH/bannner-1-2.jpg';
     const banner2 = 'https://i.ibb.co/TK2NFWg/banner-2-1.jpg';
     const banner3 = 'https://i.ibb.co/K7wVFZT/banner-3.jpg';
@@ -11,6 +11,9 @@ const Banner = () => {
 
     return (
         <div className="mb-5">
+
+            {/* carousel */}
+
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router';
 import './Package.css';
-// import useAuth from '../../hooks/useAuth';
 
 const Package = (props) => {
 
+    // object destructuring 
     const { key, name, img, price, description } = props.pkg;
-    // const { user } = useAuth();
-    // const history = useHistory();
+
+    // package card style 
     const cardStyle = {
         height: "550px",
         borderRadius: "15px"
@@ -16,6 +15,8 @@ const Package = (props) => {
 
     return (
         <div>
+
+            {/* single package  */}
             <div className="col hover-effect">
                 <div style={cardStyle} className="card mb-3">
                     <img src={img} className="card-img-top img-radius" style={{ height: "250px" }} alt="package_photo" />

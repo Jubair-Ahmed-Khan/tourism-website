@@ -6,6 +6,7 @@ const NotFound = () => {
 
     //404 background image source
     const imgSrc = 'https://i.ibb.co/YWywzJY/error.png';
+
     // react history hook 
     const history = useHistory();
 
@@ -13,7 +14,9 @@ const NotFound = () => {
     const redirectHome = () => {
         history.push('/home');
     }
+
     return (
+        // 404 container 
         <div className="container-fluid error-bg">
             <div className="w-100 d-flex flex-column justify-content-center align-items-center">
                 <img className="img-fluid" src={imgSrc} alt="404_error" />

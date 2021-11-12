@@ -15,6 +15,7 @@ const Register = () => {
     const location = useLocation();
     const history = useHistory();
 
+    // redirect home 
     if (user.email) {
         history.push('/home');
     }
@@ -88,8 +89,6 @@ const Register = () => {
                                 className="form-control" id="exampleInputPassword1" placeholder="Enter your password" />
                         </div>
 
-                        {/* display error  */}
-                        {/* <p className="text-danger">{error}</p> */}
 
                         <button type="submit" className="btn btn-success w-100">Register</button>
 

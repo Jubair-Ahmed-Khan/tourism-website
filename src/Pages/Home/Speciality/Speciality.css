@@ -1,6 +1,9 @@
+/* speciality transition */
 .hover-effect {
     transition: 0.3s;
 }
+
+/* speciality hover effect  */
 .hover-effect:hover {
     transform: translate(0, -10px);
 }
